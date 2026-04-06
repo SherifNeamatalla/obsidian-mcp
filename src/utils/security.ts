@@ -32,7 +32,7 @@ export class RateLimiter {
 }
 
 // Message size validation to prevent memory issues
-const MAX_MESSAGE_SIZE = 5 * 1024 * 1024; // 5MB for local usage
+const MAX_MESSAGE_SIZE = 50 * 1024 * 1024; // 50MB for local usage
 
 export function validateMessageSize(message: any): void {
   const size = new TextEncoder().encode(JSON.stringify(message)).length;
